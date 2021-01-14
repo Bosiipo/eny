@@ -1,0 +1,13 @@
+.filter {
+  width: 48%;
+  background-color: #f5f5f5;
+  border: 0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  border-width: 0px;
+}
+
+.filter:active {
+  background: white;
+}

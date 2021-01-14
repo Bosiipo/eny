@@ -1,0 +1,18 @@
+.search__bar {
+  width: 100%;
+  margin-top: 40px;
+  padding: 5px 11px;
+  background-color: #f5f5f5;
+  border: 0;
+}
+
+.search__bar:active {
+  background: white;
+}
+
+@media screen and (min-width: 767px) {
+  .search__bar {
+    width: 60%;
+    padding: 11px 41px;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "currency-rates-api",
+  "version": "1.0.0",
+  "description": "get latest currency rates ",
+  "main": "build/app.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d build",
+    "clean": "rm -rf build",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bosiipo",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  },
+  "engines": {
+    "node": "12.18.4",
+    "npm": "6.14.6"
+  }
+}
