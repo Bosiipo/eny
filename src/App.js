@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import style from './App.module.css';
 // import InfiniteScroll from 'react-infinite-scroll-component';
 import { Container, Row, Col, Spinner } from "reactstrap";

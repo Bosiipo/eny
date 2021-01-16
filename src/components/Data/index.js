@@ -1,3 +1,4 @@
+import React from 'react';
 import './data.css';
 
 const Data = ({user}) => {
