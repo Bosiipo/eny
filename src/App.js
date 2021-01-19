@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import style from './App.module.css';
-// import InfiniteScroll from 'react-infinite-scroll-component';
 import { Container, Row, Col, Spinner } from "reactstrap";
 import SearchBar from './components/SearchBar';
 import Filter from './components/Filter';
@@ -14,7 +13,6 @@ const App = () => {
   const [users, setUsers] = useState([{}]);
   const [cardsPerPage, setCardsPerPage] = useState(20);
   const [currentPage, setCurrentPage] = useState(1);
-  const [ErrorMessage, setErrorMessage] = useState('');  //to work on
   const [filterValue, setFilterValue] = useState('');
   const [data, setData] = useState([{}]);
 
@@ -35,7 +33,6 @@ const App = () => {
     fetchData();
   }, []);
 
-
   const changePage = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -51,7 +48,6 @@ const App = () => {
     console.log(arr);
     return setData(arr);
   }
-
 
   const updateGender = (e) => {
     let arr = [];
@@ -73,7 +69,6 @@ const App = () => {
     })
   }
 
-
   return (
     <div className={style["App"]}>
       <h1 className="pt-4">Records API</h1>
@@ -85,16 +80,9 @@ const App = () => {
           <div className={style["filters"]}>
             <Filter data={gender} filterBy="Gender" value={filterValue} updateFilter={updateGender} />
             <Filter data={paymentMethod} filterBy="Payment method" value={filterValue} updateFilter={updatePaymentMethod} />
-
-
-            
-
-
           </div>
         </div>
       </Container>
-
-
       <Container className={style["data__container"]}>
         <Row className={style["roww"]}>
         {data?.length !== 0 ?
@@ -111,7 +99,6 @@ const App = () => {
         }
         </Row>
       </Container>
-
       <Container>
         <Pagination 
           totalCards={users.length}
@@ -125,21 +112,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// <InfiniteScroll
-//         dataLength={20}
-//         next={this.fetchMoreData}
-//         style={{ display: 'flex', flexDirection: 'column-reverse' }} //To put endMessage and loader to the top.
-//         inverse={true} //
-//         hasMore={true}
-//         loader={<h4>Loading...</h4>}
-//         scrollableTarget="scrollableDiv"
-//       ></InfiniteScroll>
-
-// <div className="d-flex flex-column">
-//               <p>Filter by: Gender </p>
-//             </div>
-//             <div className="d-flex flex-column">
-//               <p>Filter by: Payment Method</p>
-//             </div>
